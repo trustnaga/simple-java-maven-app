@@ -1,0 +1,72 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BouncyCastleCertificateGeneratorv2",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.BouncyCastleCertificateGeneratorv2",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "BouncyCastleCertificateGenerator",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.BouncyCastleCertificateGenerator",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "CertificateSignerV2",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.CertificateSignerV2",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "CertificateSigner",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.CertificateSigner",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "ImportCert",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.ImportCert",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "env": {
+                "KEY_VAULT_NAME": "tests12323"
+            }
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.App",
+            "projectName": "my-app",
+            "env": {
+                "KEY_VAULT_NAME": "tests12323"
+            }
+        },
+        {
+            "type": "java",
+            "name": "ImportCert",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.ImportCert",
+            "projectName": "my-app",
+            "env": {
+                "KEY_VAULT_NAME": "tests12323"
+            }
+        }
+    ]
+}
