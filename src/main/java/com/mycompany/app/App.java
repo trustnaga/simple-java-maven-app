@@ -30,6 +30,7 @@ import org.bouncycastle.asn1.x509.KeyUsage;
 import org.bouncycastle.cert.X509CertificateHolder;
 import org.bouncycastle.cert.X509v3CertificateBuilder;
 import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
+import org.bouncycastle.cert.jcajce.JcaX509CertificateHolder;
 import org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils;
 import org.bouncycastle.cert.jcajce.JcaX509v3CertificateBuilder;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
@@ -143,8 +144,8 @@ public class App {
         byte[] certificateBytes = retrievedCertificate.getCer();
         CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
         X509Certificate x509Certificate = (X509Certificate) certFactory.generateCertificate(new ByteArrayInputStream(certificateBytes));
-        X500Name Issuerx500name = new X500Name( x509Certificate.getSubjectX500Principal().getName());
-
+       // X500Name Issuerx500name = new X500Name( x509Certificate.getSubjectX500Principal().getName());
+        X500Name Issuerx500name = new JcaX509CertificateHolder(x509Certificate).getSubject();
         BigInteger issuedCertSerialNum = new BigInteger(Long.toString(new SecureRandom().nextLong()));
 
         // Setup start date to yesterday and end date for 1 year validity
